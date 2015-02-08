@@ -3,7 +3,8 @@ class Api::GrumblesController < ApplicationController
   before_action :set_grumble, only: [:show, :update, :destroy]
 
   def index
-    render json: Grumble.all, :status => 200}
+    
+    #render json: Grumble.all, :status => 200
   end
 
   def show

@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require undercore.min
-//= require backbone.min
+//= require underscore.js
+//= require backbone.js
 //= require handlebars
 //= require_self
 //= require_tree ./models
@@ -30,6 +30,7 @@ App = {
 
 $(document).ready(function(){
  App.Routers.main = new App.Routers.Main();
+  bootstrap();
  Backbone.history.start();
 });
 

@@ -36,8 +36,10 @@ App.Routers.Main = Backbone.Router.extend({
         formView: App.Views.grumbleFormView
       }
     );
+
+    console.log(App.Views.grumbleListView);
     // pretend we fetched from the server
-    App.Collections.grumbles.reset();
+    //App.Collections.grumbles.reset();
     
   }
 

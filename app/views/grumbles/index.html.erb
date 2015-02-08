@@ -1,0 +1,14 @@
+<!--called from the yield javascript tha tis called from application.erb-->
+<% content_for :javascript do %>
+<script>
+  function bootstrap() {
+    //calling this in application.js to render after the document is loaded. ArraySerializer is a gem that turns ruby objects into JSON string.
+ var grumbleJsonStr = <%== ActiveModel::ArraySerializer.new(@grumbles).to_json %>;
+ //setting the collection to an object initialized with a JSON string
+  App.Views.grumbleListView.collection =new App.Collections.Grumblrs(grumbleJsonStr);
+  //calling the code that adds the data to the view.
+  App.Views.grumbleListView.addAll();
+}
+</script>
+<% end %>
+

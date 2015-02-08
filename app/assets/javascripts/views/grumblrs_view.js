@@ -17,11 +17,13 @@ App.Views.GrumblrsView = Backbone.View.extend({
 
   addOne: function(grumble){
     var newGrumbleView = new App.Views.GrumblrView({ model: grumble });
+    console.log("adding grumble");
     this.views.push(newGrumbleView)
     this.$el.append(newGrumbleView.el);
   },
 
   addAll: function(){
+    console.log(this.collection.length)
     this.collection.each(function(grumble){
       this.addOne(grumble);
     },this)
