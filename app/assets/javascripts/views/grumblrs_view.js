@@ -44,18 +44,6 @@ App.Views.GrumblrsView = Backbone.View.extend({
     return matches[0];
  },
 
-  showAuthor: function(author){
-  var matches = _.filter(this.views, function(view) {return view.model.get('author') == author });
-    return matches;
- },
-
-  filterByAuthor: function(author){
-    _.each(this.views, function(view){
-      if(view.model.get('author') != author){
-        view.$el.hide();
-      }
-    })
-  },
 
   unfilter: function() {
     this.$('.grumble').show();

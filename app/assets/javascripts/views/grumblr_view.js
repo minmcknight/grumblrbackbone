@@ -24,7 +24,7 @@ App.Views.GrumblrView = Backbone.View.extend({
   },
 
   onDestroy: function() {
-    this.model.collection.remove(this.model);
+    this.model.destroy();
     this.remove();
   },
 
@@ -39,7 +39,7 @@ App.Views.GrumblrView = Backbone.View.extend({
   },
   update: function(){
     var data = this.getFormData();
-    this.model.set(data);
+    this.model.save(data);
     this.$('grumble-form').remove();
     App.Routers.main.navigate("");
   },

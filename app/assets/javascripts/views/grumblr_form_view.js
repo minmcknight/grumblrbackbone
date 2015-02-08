@@ -38,11 +38,18 @@ App.Views.GrumblrFormView = Backbone.View.extend({
 
   newGrumble: function(){
     var data = this.getFormData();
-    this.collection.add(data);
+    this.collection.create(data, {
+      success: function(model, response, options) {
+        alert("Congratulations! You created a grumble.");
+        console.log(model, response);
+      },
+      error: function(model, response){
+        alert(response.response.JSON.error);
+      }
+    });
     // clear the form
     this.render();
     this.hide();
   }
-
   
 });

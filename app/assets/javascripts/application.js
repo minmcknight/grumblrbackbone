@@ -12,8 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require undercore.min
+//= require backbone.min
+//= require handlebars
 //= require_self
-//= require_tree .
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 
 App = {
     Collections: {},
@@ -26,3 +32,25 @@ $(document).ready(function(){
  App.Routers.main = new App.Routers.Main();
  Backbone.history.start();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

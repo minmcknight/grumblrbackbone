@@ -71,13 +71,16 @@ header img {
   margin: 20px 20px 0 0;
 }
 
-.grumble-form {
+.modal .grumble-form {
   position: absolute;
   top: 50%;
   left: 25%;
   margin: 5px auto;
+  
+}
+.grumble-form {
   border-top: 5px solid coral;
-  background: #787878  ;
+  background: #787878;
 }
 .grumble-form input {
   height: 45px;
@@ -85,9 +88,10 @@ header img {
   background: cornsilk;
 }
 .grumble-form span {
-  color: cornsilk;
-  cursor: pointer;
-}
+   color: cornsilk;
+   cursor: pointer;
+ }
+ 
 .add-grumble {
   position: fixed;
   top: 100px;
